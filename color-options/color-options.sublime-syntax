@@ -1,0 +1,123 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: Sublime color demo
+file_extensions:
+  - txt
+
+scope: none
+
+contexts:
+  main:
+    - match: '^01 -- .*$'
+      scope: comment
+    - match: '^02 -- .*$'
+      scope: constant
+    - match: '^03 -- .*$'
+      scope: constant.character.escape
+    - match: '^04 -- .*$'
+      scope: constant.numeric
+    - match: '^05 -- .*$'
+      scope: constant.other.color
+    - match: '^06 -- .*$'
+      scope: constant.other.symbol
+    - match: '^07 -- .*$'
+      scope: entity.name.class
+    - match: '^08 -- .*$'
+      scope: entity.name.function
+    - match: '^09 -- .*$'
+      scope: entity.name.section
+    - match: '^10 -- .*$'
+      scope: entity.name.tag
+    - match: '^11 -- .*$'
+      scope: entity.name.type.class
+    - match: '^12 -- .*$'
+      scope: entity.other.attribute-name
+    - match: '^13 -- .*$'
+      scope: entity.other.attribute-name.id
+    - match: '^14 -- .*$'
+      scope: entity.other.inherited-class
+    - match: '^15 -- .*$'
+      scope: invalid.illegal
+    - match: '^16 -- .*$'
+      scope: keyword
+    - match: '^17 -- .*$'
+      scope: keyword.operator
+    - match: '^18 -- .*$'
+      scope: keyword.other.special-method
+    - match: '^19 -- .*$'
+      scope: keyword.other.unit
+    - match: '^20 -- .*$'
+      scope: markup.bold
+    - match: '^21 -- .*$'
+      scope: markup.changed
+    - match: '^22 -- .*$'
+      scope: markup.deleted
+    - match: '^23 -- .*$'
+      scope: markup.heading punctuation.definition.heading
+    - match: '^24 -- .*$'
+      scope: markup.inserted
+    - match: '^25 -- .*$'
+      scope: markup.italic
+    - match: '^26 -- .*$'
+      scope: markup.list
+    - match: '^27 -- .*$'
+      scope: markup.quote
+    - match: '^28 -- .*$'
+      scope: markup.raw.inline
+    - match: '^29 -- .*$'
+      scope: meta.class
+    - match: '^30 -- .*$'
+      scope: meta.link
+    - match: '^31 -- .*$'
+      scope: meta.require
+    - match: '^32 -- .*$'
+      scope: meta.selector
+    - match: '^33 -- .*$'
+      scope: meta.separator
+    - match: '^34 -- .*$'
+      scope: none
+    - match: '^35 -- .*$'
+      scope: punctuation.definition.array
+    - match: '^36 -- .*$'
+      scope: punctuation.definition.bold
+    - match: '^37 -- .*$'
+      scope: punctuation.definition.comment
+    - match: '^38 -- .*$'
+      scope: punctuation.definition.entity
+    - match: '^39 -- .*$'
+      scope: punctuation.definition.italic
+    - match: '^40 -- .*$'
+      scope: punctuation.definition.parameters
+    - match: '^41 -- .*$'
+      scope: punctuation.definition.string
+    - match: '^42 -- .*$'
+      scope: punctuation.definition.variable
+    - match: '^43 -- .*$'
+      scope: punctuation.section.embedded
+    - match: '^44 -- .*$'
+      scope: storage
+    - match: '^45 -- .*$'
+      scope: string
+    - match: '^46 -- .*$'
+      scope: string.other.link
+    - match: '^47 -- .*$'
+      scope: string.regexp
+    - match: '^48 -- .*$'
+      scope: sublimelinter.gutter-mark
+    - match: '^49 -- .*$'
+      scope: sublimelinter.mark.error
+    - match: '^50 -- .*$'
+      scope: sublimelinter.mark.warning
+    - match: '^51 -- .*$'
+      scope: support.class
+    - match: '^52 -- .*$'
+      scope: support.function
+    - match: '^53 -- .*$'
+      scope: support.function.any-method
+    - match: '^54 -- .*$'
+      scope: variable
+    - match: '^55 -- .*$'
+      scope: variable.interpolation
+    - match: '^56 -- .*$'
+      scope: variable.parameter.function
