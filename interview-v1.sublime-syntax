@@ -1,0 +1,65 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: Interview V1
+file_extensions:
+  - txt
+scope: none
+
+variables:
+  colorone: 'invalid.illegal'
+
+contexts:
+  main:
+    # ### chapter
+    - match: '###\s\w+.*'
+      scope: entity.name.class
+
+    # ==== Main heading ====
+    - match: '===+\s.*\s===+'
+      scope: markup.bold
+
+    # ---- Sub heading ----
+    - match: '---+\s\w+.*\s---+'
+      scope: entity.name.class
+
+    # Q: Question?
+    - match: '^(q|Q)(:|;).*$'
+      scope: keyword.control.example-c
+
+    #   Q: Unused question?
+    - match: '^\t+(q|Q)(:|;).*$'
+      scope: comment
+
+    # + positive point
+    - match: '^\s*\+\s.*'
+      scope: markup.inserted
+    
+    # - negative point
+    - match: '^\s*\-\s.*'
+      scope: string.other.link
+
+    # Strings begin and end with quotes, and use backslashes as an escape character
+    - match: '"'
+      scope: markup.quote
+      push: double_quoted_string
+
+    # Comments begin with a '//' and finish at the end of the line
+    - match: '//'
+      scope: punctuation.definition.comment.example-c
+      push: line_comment
+
+  double_quoted_string:
+    - meta_scope: markup.quote
+    # Escaped symbols, like \"
+    - match: '\\.'
+      scope: markup.quote
+    # Closing quote: "
+    - match: '"'
+      scope: markup.quote
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line.example-c
+    - match: $
+      pop: true
