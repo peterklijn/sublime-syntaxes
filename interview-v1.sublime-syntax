@@ -24,11 +24,11 @@ contexts:
       scope: entity.name.class
 
     # Q: Question?
-    - match: '^(q|Q)(:|;).*$'
+    - match: '^(q|Q)\w?(:|;).*$'
       scope: keyword.control.example-c
 
     #   Q: Unused question?
-    - match: '^\t+(q|Q)(:|;).*$'
+    - match: '^\t+(q|Q)\w?(:|;).*$'
       scope: comment
 
     # + positive point
