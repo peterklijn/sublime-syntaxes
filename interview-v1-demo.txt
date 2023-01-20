@@ -1,0 +1,27 @@
+// Set syntax to 'User -> Interview V1'
+
+===== Bold header =====
+
+----- Section header -----
+
+
+### Header
+
++ positive point
+- negative point
+
+// comment
+
+Q: Question
+q: Question
+Qp: Question by other
+qp: question by other
+
+	Q: Unused question
+	q: Other unused question
+
+"A quote"
+
+> Also a quote
+
+# Bold line
