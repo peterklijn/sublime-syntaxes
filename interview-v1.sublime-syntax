@@ -35,7 +35,11 @@ contexts:
     - match: '^\s*\+\s.*'
       scope: markup.inserted
     
-    # - negative point
+    # -- negative point
+    - match: '^\s*\-\-\s.*'
+      scope: markup.deleted
+
+    # - list item
     - match: '^\s*\-\s.*'
       scope: string.other.link
 
