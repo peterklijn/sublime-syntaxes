@@ -17,7 +17,7 @@ contexts:
 
     # ==== Main heading ====
     - match: '===+\s.*\s===+'
-      scope: markup.bold
+      scope: markup.heading punctuation.definition.heading
 
     # ---- Sub heading ----
     - match: '---+\s\w+.*\s---+'
@@ -53,17 +53,27 @@ contexts:
       scope: punctuation.definition.comment.example-c
       push: line_comment
 
+    # Code blocks start and end with ```
+    - match: '```'
+      push: code_block
+
   double_quoted_string:
-    - meta_scope: markup.quote
+    - meta_scope: markup.italic
     # Escaped symbols, like \"
     - match: '\\.'
-      scope: markup.quote
+      scope: markup.italic
     # Closing quote: "
     - match: '"'
-      scope: markup.quote
+      scope: markup.italic
       pop: true
 
   line_comment:
     - meta_scope: comment.line.example-c
     - match: $
+      pop: true
+
+  code_block:
+    - meta_scope: markup.raw.inline
+    - match: '```'
+      scope: markup.raw.inline
       pop: true
