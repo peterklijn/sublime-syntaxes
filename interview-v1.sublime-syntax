@@ -47,9 +47,12 @@ contexts:
     - match: '^\s*\-\s.*'
       scope: string.other.link
 
-    # Strings begin and end with quotes, and use backslashes as an escape character
+    - match: '>\s\w+.*'
+      scope: markup.italic
+
+    # "..." Strings begin and end with quotes, and use backslashes as an escape character
     - match: '"'
-      scope: markup.quote
+      # scope: markup.italic
       push: double_quoted_string
 
     # Comments begin with a '//' and finish at the end of the line
