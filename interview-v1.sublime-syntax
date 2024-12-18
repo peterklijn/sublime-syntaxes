@@ -23,6 +23,10 @@ contexts:
     - match: '---+\s\w+.*\s---+'
       scope: entity.name.class
 
+     # # Bold
+    - match: '#\s\w+.*'
+      scope: markup.bold
+
     # Q: Question?
     - match: '^(q|Q)\w?(:|;).*$'
       scope: keyword.control.example-c
